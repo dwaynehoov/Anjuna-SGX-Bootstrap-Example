@@ -28,7 +28,7 @@ chmod +x anjuna-runtime-ubuntu-release-$VERSION.bin
 ./anjuna-runtime-ubuntu-release-$VERSION.bin
 sleep 2
 
-echo "Setup Environment"
+echo "Setup Environment - add this to your .bash_profile"
 echo "---------------------------"
 source $ANJ_INSTALL_DIR/anjuna-runtime-ubuntu-release-$VERSION/env.sh
 sleep 2
@@ -49,6 +49,11 @@ sudo /etc/init.d/redis-server stop
 #update manifest file here
 echo "Creating Enclave Manifest File"
 echo "---------------------------"
+
+echo "Setup Environment - add this to your .bash_profile"
+echo "---------------------------"
+source $ANJ_INSTALL_DIR/anjuna-runtime-ubuntu-release-$VERSION/env.sh
+sleep 2
 
 echo "Completed"
 echo -ne '\n'
