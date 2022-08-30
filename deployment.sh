@@ -24,8 +24,8 @@ sleep 2
 
 echo "Install Binary"
 echo "---------------------------"
-sudo chmod +x anjuna-runtime-ubuntu-release-$VERSION.bin
-sudo ./anjuna-runtime-ubuntu-release-$VERSION.bin
+chmod +x anjuna-runtime-ubuntu-release-$VERSION.bin
+./anjuna-runtime-ubuntu-release-$VERSION.bin
 sleep 2
 
 echo "Setup Environment"
@@ -49,7 +49,6 @@ sudo /etc/init.d/redis-server stop
 #update manifest file here
 echo "Creating Enclave Manifest File"
 echo "---------------------------"
-
 
 echo "Completed"
 echo -ne '\n'

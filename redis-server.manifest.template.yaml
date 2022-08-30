@@ -1,2 +1,2 @@
 enclave_size: 2G
-num_threads: 16
+num_threads: 32
