@@ -22,11 +22,6 @@ wget https://api.downloads.anjuna.io/v1/releases/anjuna-runtime-ubuntu-release-$
   --header="X-Anjuna-Auth-Token:$APIKEY"
 sleep 2
 
-#echo "Create Opt Directory"
-#echo "---------------------------"
-#sudo mkdir -p /opt/anjuna/nitro
-#sleep 2
-
 echo "Install Binary"
 echo "---------------------------"
 sudo chmod +x anjuna-runtime-ubuntu-release-$VERSION.bin
@@ -43,11 +38,18 @@ echo "---------------------------"
 anjuna-sgxrun --version
 sleep 2
 
+#update for desired application
 echo "Installing Redis Server"
 echo "---------------------------"
 sudo apt update
 sudo apt upgrade -y
 sudo apt install redis-server -y
+sudo /etc/init.d/redis-server stop
+
+#update manifest file here
+echo "Creating Enclave Manifest File"
+echo "---------------------------"
+
 
 echo "Completed"
 echo -ne '\n'
